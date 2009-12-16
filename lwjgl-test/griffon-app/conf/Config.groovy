@@ -102,3 +102,9 @@ griffon {
         html = 'applet.html'
     }
 }
+lwjgl.jnlp.resources = [
+    [os: 'linux', nativelibs: ["webstart/lwjgl-2.2.1-native-linux.jar"]],
+    [os: 'macosx', nativelibs: ["webstart/lwjgl-2.2.1-native-macosx.jar"]],
+    [os: 'windows', nativelibs: ["webstart/lwjgl-2.2.1-native-windows.jar"]],
+    [os: 'solaris', nativelibs: ["webstart/lwjgl-2.2.1-native-solaris.jar"]],
+]
