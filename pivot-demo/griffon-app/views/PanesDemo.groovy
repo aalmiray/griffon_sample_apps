@@ -4,7 +4,8 @@ tabPane(styles: "{padding: 4, tabOrientation: 'vertical'}") {
      'Table': TablePaneDemo,
      'Border': BorderDemo,
      'Stack': StackPaneDemo,
-     'Split': SplitPaneDemo].each { demoLabel, demoScript ->
+     'Split': SplitPaneDemo,
+     'Form': FormDemo].each { demoLabel, demoScript ->
         noparent { demo = build(demoScript) }
         widget(demo, label: demoLabel)    
     }
