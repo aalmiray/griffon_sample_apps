@@ -9,7 +9,8 @@ application(title: "Pivot on Griffon", maximized: true) {
          'ListButton': ListButtonDemo,
          'Text': TextDemo,
          'Separator': SeparatorDemo,
-         'Layout Containers': PanesDemo].each { demoLabel, demoScript ->
+         'Layout Containers': PanesDemo,
+         'Navigation Containers': Panes2Demo].each { demoLabel, demoScript ->
             demo = null
             noparent { demo = build(demoScript) }
             widget(demo, label: demoLabel)
