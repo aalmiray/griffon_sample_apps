@@ -1,0 +1,6 @@
+<BoxPane styles="{padding:4, horizontalAlignment:'center', verticalAlignment:'center'}"
+         xmlns:wtkx="http://pivot.apache.org/wtkx"
+         xmlns="org.apache.pivot.wtk">
+    <PushButton wtkx:id="button1" buttonData="Button1"/>
+    <PushButton wtkx:id="button2" buttonData="Button2"/>
+</BoxPane>
