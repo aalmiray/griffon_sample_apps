@@ -8,7 +8,7 @@ application(title:'DemoConsole',
     panel(border:emptyBorder(6)) {
         borderLayout()
 
-        scrollPane(constraints:CENTER) {
+        scrollPane(constraints: CENTER) {
             textArea(text:bind(target:model, targetProperty:'scriptSource'),
                 enabled: bind {model.enabled},
                 columns:40, rows:10)
