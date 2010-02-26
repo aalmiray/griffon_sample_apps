@@ -1,0 +1,13 @@
+* Erlang
+
+Run the Erlang server with
+   erl -sname servernode -setcookie cookie
+ > c(mathserver).
+ > mathserver:start().
+
+* Griffon
+
+Run the application by invoking 'griffon run-app' or
+   java -jar dist/jar/erlang-test.jar
+
+Make sure to enter a correct server node address like 'servernode@<yourhost>'
