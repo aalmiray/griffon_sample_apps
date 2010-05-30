@@ -1,6 +1,6 @@
 import org.apache.pivot.wtk.Orientation
 
-application(title: "Pivot on Griffon", maximized: true) {
+application(title: "Pivot on Griffon") {
     tabPane {
         ['Hello Pivot': HelloPivotDemo,
          'Label & Image': LabelAndImageDemo,

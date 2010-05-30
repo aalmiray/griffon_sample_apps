@@ -1,4 +1,4 @@
-application(title: "pivot-app", maximized: true) {
+application(title: "pivot-app") {
     vbox(styles: "{horizontalAlignment:'center', verticalAlignment:'center'}") {
         label( 'Enter some text below')
         textInput(textChanged: { source -> model.input = source.text })
