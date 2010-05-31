@@ -4,7 +4,13 @@ application {
     autoShutdown=true
 }
 mvcGroups {
+    Drop {
+        model = 'DropModel'
+        view = 'DropView'
+    }
+
     Misc {
+        model = 'MiscModel'
         view = 'MiscView'
     }
 

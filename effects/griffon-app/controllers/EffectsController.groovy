@@ -14,6 +14,9 @@ class EffectsController {
 
         def map = buildMVCGroup('Misc', parentModel: model, target: view.window)
         view.panes.add(map.view.box, 'Miscellaneous')
+        map = buildMVCGroup('Drop', parentModel: model, target: view.window)
+        view.panes.add(map.view.box, 'Drop')
+
         model.currentPage = view.panes.layout.cardNameAt(0i)
     }
 

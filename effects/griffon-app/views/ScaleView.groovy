@@ -1,4 +1,5 @@
 import net.miginfocom.swing.MigLayout
+import griffon.effects.Anchor
 
 actions {
     action(id: 'runAction',
@@ -19,6 +20,10 @@ panel(id: 'box', layout: new MigLayout('fill')) {
     label('Scale')
     checkBox('X', selected: bind('scaleX', target: model, mutual: true))
     checkBox('Y', selected: bind('scaleY', target: model, mutual: true), constraints: 'wrap')
+
+    label('Anchor')
+    comboBox(items: Anchor.collect{it.name()}, id: 'anchor', constraints: 'span 2, wrap')
+    bean(model, anchor: bind{anchor.selectedItem})
 
     separator(constraints: 'grow, span 3, wrap')
 

@@ -21,21 +21,31 @@ actions {
         enabled: bind{!parentModel.animating},
         closure: {
             parentModel.animating = true
-            Effects.shake(target){w, p -> parentModel.reset()}
+            Effects.shake(model.properties, target){w, p -> parentModel.reset()}
          })
     action(id: 'fadeAction',
         name: 'Fade / Appear',
         enabled: bind{!parentModel.animating},
         closure: {
             parentModel.animating = true
-            Effects.fade(target){w, p -> Effects.appear(w) {t, a ->
-               parentModel.animating = false
+            Effects.fade(model.properties, target){w, p -> Effects.appear(w) {t, a ->
+                parentModel.animating = false
             }}
         })
 }
 
 panel(id: 'box', layout: new MigLayout('fill', 'center')) {
-    button(puffAction, constraints: 'grow, wrap')
-    button(shakeAction, constraints: 'grow, wrap')
-    button(fadeAction, constraints: 'grow')
+    button(puffAction, constraints: 'grow, span 2, wrap')
+    button(shakeAction, constraints: 'grow, span 2, wrap')
+    button(fadeAction, constraints: 'grow, span 2, wrap')
+
+    separator(constraints: 'grow, span 2, wrap')
+
+    label('Duration:')
+    textField(columns: 20, constraints: 'wrap',
+        text: bind('duration', target: model, mutual: true))
+
+    label('Delay:')
+    textField(columns: 20,
+        text: bind('delay', target: model, mutual: true))
 }
