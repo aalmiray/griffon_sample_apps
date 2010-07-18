@@ -1,4 +1,3 @@
-import net.miginfocom.swing.MigLayout
 import griffon.effects.Effects
 import griffon.effects.EffectUtil
 
@@ -34,7 +33,8 @@ actions {
         })
 }
 
-panel(id: 'box', layout: new MigLayout('fill', 'center')) {
+panel(id: 'box') {
+    migLayout(layoutConstraints: 'fill', columnConstraints: 'center')
     button(puffAction, constraints: 'grow, span 2, wrap')
     button(shakeAction, constraints: 'grow, span 2, wrap')
     button(fadeAction, constraints: 'grow, span 2, wrap')

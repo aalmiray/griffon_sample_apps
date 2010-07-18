@@ -1,4 +1,3 @@
-import net.miginfocom.swing.MigLayout
 import griffon.effects.*
 
 Closure resetWin = {w, p -> 
@@ -26,7 +25,8 @@ actions {
          })
 }
 
-panel(id: 'box', layout: new MigLayout('fill', 'center')) {
+panel(id: 'box') {
+    migLayout(layoutConstraints: 'fill', columnConstraints: 'center')
     button(dropOutAction, constraints: 'grow, span 2, wrap')
     button(dropInAction, constraints: 'grow, span 2, wrap')
 

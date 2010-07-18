@@ -1,5 +1,3 @@
-import net.miginfocom.swing.MigLayout
-
 actions {
     action(id: 'runAction',
         name: 'Run',
@@ -7,7 +5,8 @@ actions {
         closure: controller.runEffect)
 }
 
-panel(id: 'box', layout: new MigLayout('fill')) {
+panel(id: 'box') {
+    migLayout(layoutConstraints: 'fill')
     label('X (in pixels):')
     textField(columns: 20, constraints: 'span 2, wrap',
         text: bind('x', target: model, mutual: true))

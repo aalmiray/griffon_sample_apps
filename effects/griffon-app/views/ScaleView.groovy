@@ -1,4 +1,3 @@
-import net.miginfocom.swing.MigLayout
 import griffon.effects.Anchor
 
 actions {
@@ -8,7 +7,8 @@ actions {
         closure: controller.runEffect)
 }
 
-panel(id: 'box', layout: new MigLayout('fill')) {
+panel(id: 'box') {
+    migLayout(layoutConstraints: 'fill')
     label('From (percentage):')
     textField(columns: 20, constraints: 'span 2, wrap',
         text: bind('from', target: model, mutual: true))

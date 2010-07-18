@@ -1,6 +1,5 @@
 import com.bric.image.transition.Transition2D
 import com.bric.image.transition.vanilla.PushTransition2D
-import net.miginfocom.swing.MigLayout
 import java.awt.Point
 import java.awt.GraphicsEnvironment
 import griffon.effects.Effects
@@ -39,8 +38,10 @@ application(title: 'Effects', id: 'window',
   iconImages: [imageIcon('/griffon-icon-48x48.png').image,
                imageIcon('/griffon-icon-32x32.png').image,
                imageIcon('/griffon-icon-16x16.png').image]) {
-    panel(layout: new MigLayout('fill','2%[left 20%]2%[center]2%[right 20%]2%',
-                                       '2%[top 10%]2%[top 10%]2%[bottom]2%')) {
+    panel {
+        migLayout(layoutConstraints: 'fill',
+                  columnConstraints: '2%[left 20%]2%[center]2%[right 20%]2%',
+                  rowConstraints: '2%[top 10%]2%[top 10%]2%[bottom]2%')
         button(resetAction, constraints: 'grow, span 3, wrap')
         button(previousAction)
         label(text: bind{model.currentPage})

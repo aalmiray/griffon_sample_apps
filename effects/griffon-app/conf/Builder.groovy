@@ -11,3 +11,5 @@ root {
 root.'griffon.builder.trident.TridentBuilder'.view = '*'
 root.'TransitionsGriffonAddon'.addon=true
 root.'EffectsGriffonAddon'.addon=true
+
+root.'MiglayoutGriffonAddon'.addon=true
