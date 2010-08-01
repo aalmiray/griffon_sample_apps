@@ -16,6 +16,6 @@ running the application is as simple as
 The application is not yet finished, it's missing some features I'd
 like to show:
 - custom table/list renderers
-- a porper schedule layout
+- a proper schedule layout
 
 Enjoy!
