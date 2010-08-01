@@ -1,6 +1,6 @@
 Sample Griffon application that relies on Devoxx's REST API.
 This application showcases the following features:
-- a custom WidnwoDisplayHandler (fades in the main frame)
+- a custom WindowDisplayHandler (fades in the main frame)
 - custom look & feel (JTattoo's Noire)
 - use of icon sets (Crystal)
 - query REST APIs using the REST plugin
@@ -13,7 +13,7 @@ running the application is as simple as
 
     griffonw run-app
 
-The application is ot yet finished, it's missing some features I'd
+The application is not yet finished, it's missing some features I'd
 like to show:
 - custom table/list renderers
 - a porper schedule layout
