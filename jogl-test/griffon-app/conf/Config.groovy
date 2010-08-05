@@ -18,89 +18,20 @@ log4j {
     additivity.StackTrace=false
 }
 
-// key signing information
-environments {
-    development {
-        signingkey {
-            params {
-                sigfile = 'GRIFFON'
-                keystore = "${basedir}/griffon-app/conf/keys/devKeystore"
-                alias = 'development'
-                storepass = 'BadStorePassword'
-                keypass   = 'BadKeyPassword'
-                lazy      = true // only sign when unsigned
-            }
-        }
-
-    }
-    test {
-        griffon {
-            jars {
-                sign = false
-                pack = false
-            }
-        }
-    }
-    production {
-        signingkey {
-            params {
-                sigfile = 'GRIFFON'
-                keystore = 'CHANGE ME'
-                alias = 'CHANGE ME'
-                // NOTE: for production keys it is more secure to rely on key prompting
-                // no value means we will prompt //storepass = 'BadStorePassword'
-                // no value means we will prompt //keypass   = 'BadKeyPassword'
-                lazy = false // sign, regardless of existing signatures
-            }
-        }
-
-        griffon {
-            jars {
-                sign = true
-                pack = true
-                destDir = "${basedir}/staging"
-            }
-            webstart {
-                codebase = 'CHANGE ME'
-            }
-        }
-    }
-}
-
-griffon {
-    memory {
-        //max = '64m'
-        //min = '2m'
-        //maxPermSize = '64m'
-    }
-    jars {
-        sign = false
-        pack = false
-        destDir = "${basedir}/staging"
-        jarName = "${appName}.jar"
-    }
-    extensions {
-        jarUrls = []
-        jnlpUrls = []
-        /*
-        resources = [
-            [
-                os: 'Windows',
-                arch: 'x86',
-                jars: ['http://acme.com/bar.jar'],
-                nativelibs: ['http://acme.com/bar-native.jar']
-            ]
-        ]
-        */
-    }
-    webstart {
-        codebase = "${new File(griffon.jars.destDir).toURI().toASCIIString()}"
-        jnlp = 'application.jnlp'
-    }
-    applet {
-        jnlp = 'applet.jnlp'
-        html = 'applet.html'
-    }
-}
-
-griffon.extensions.jnlpUrls << "http://download.java.net/media/jogl/builds/archive/jsr-231-1.x-webstart-next/jogl.jnlp"
+// The following properties have been added by the Upgrade process...
+griffon.jars.pack=false // jars were not automatically packed in Griffon 0.0
+griffon.jars.sign=true // jars were automatically signed in Griffon 0.0
+griffon.extensions.jarUrls = [] // remote jars were not possible in Griffon 0.1
+griffon.extensions.jnlpUrls = [] // remote jars were not possible in Griffon 0.1
+// may safely be removed, but calling upgrade will restore it
+def env = griffon.util.Environment.current.name
+signingkey.params.sigfile='GRIFFON' + env
+signingkey.params.keystore = "${basedir}/griffon-app/conf/keys/${env}Keystore"
+signingkey.params.alias = env
+// signingkey.params.storepass = 'BadStorePassword'
+// signingkey.params.keyPass = 'BadKeyPassword'
+signingkey.params.lazy = true // only sign when unsigned
+// you may now tweak memory parameters
+//griffon.memory.min='16m'
+//griffon.memory.max='64m'
+//griffon.memory.maxPermSize='64m'

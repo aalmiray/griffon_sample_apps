@@ -28,7 +28,7 @@ actions {
 }
 
 application(title: 'Devoxx 2010',
-  size: [640,480], undecorated: true,
+  size: [800,600], undecorated: true,
   locationByPlatform:true,
   iconImage: imageIcon('/griffon-icon-48x48.png').image,
   iconImages: [imageIcon('/griffon-icon-48x48.png').image,
@@ -68,13 +68,12 @@ application(title: 'Devoxx 2010',
                 widget(v.box, constraints: type, opaque: false)
             }
         }
-        panel(constraints: 'left', opaque: false) {
-            gridLayout(cols: 3, rows: 1)
+        toolBar(constraints: 'left', floatable: false, opaque: false) {
             button(speakerAction, constraints: 'left')
             button(presentationAction, constraints: 'left')
             button(scheduleAction, constraints: 'left')
         }
     }
 
-    swingRepaintTimeline(main, loop: true)
+    swingRepaintTimeline(main, id: 'mainTimeline', loop: true)
 }

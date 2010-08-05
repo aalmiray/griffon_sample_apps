@@ -7,4 +7,5 @@ root {
         view = '*'
     }
 }
+
 root.'JoglGriffonAddon'.addon=true

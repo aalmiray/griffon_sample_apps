@@ -19,4 +19,16 @@ class Constants {
             icon: [category: 'apps', name: 'date']
         ]
     ]
+
+    static final Map EXPERIENCE = [
+        novice: [
+            icon: [category: 'actions', name: 'oor_minimum']
+        ],
+        senior: [
+            icon: [category: 'actions', name: 'marginal']
+        ],
+        expert: [
+            icon: [category: 'actions', name: 'excellent']
+        ],
+    ]
 }

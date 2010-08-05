@@ -9,10 +9,17 @@ class PresentationsModel {
     EventList presentations = new SortedList(new BasicEventList(),
         {a, b -> a.title <=> b.title} as Comparator)
 
+    @Bindable int size = 0
+
     DevoxxService devoxxService
 
     void update() {
-        execSync {
+        execAsync {
+            // update the size first so that the label can be updated too 
+            size = devoxxService.presentations.size()
+        }
+        execAsync {
+            // change the table
             presentations.addAll(devoxxService.presentations.values())
         }
     }
