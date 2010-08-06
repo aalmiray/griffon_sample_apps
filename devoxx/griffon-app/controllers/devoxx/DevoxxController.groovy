@@ -62,6 +62,7 @@ class DevoxxController {
                     app.models[type].update()
                 }
                 view.main.layout.next(view.main)
+                view.progress.cancel()
             }
         }
 

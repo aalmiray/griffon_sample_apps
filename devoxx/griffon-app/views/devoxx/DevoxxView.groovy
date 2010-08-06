@@ -79,13 +79,15 @@ application(title: 'Devoxx 2010',
     panel(constraints: 'loader', opaque: false) {
         migLayout(layoutConstraints: 'fill', columnConstraints: 'center', rowConstraints: 'center')
         panel(opaque: false) {
-            migLayout(layoutConstraints: '')
+            migLayout(layoutConstraints: 'insets 0 0 0 0, gapx 5, gapy 5', columnConstraints: '[25%][25%][25%][25%]')
             label('Loading', constraints: 'center, span 4, wrap',
                   foreground: Color.WHITE, font: new Font('Helvetica', Font.BOLD, 32))
+            widget(id: 'progress', new ProgressIndicator(), constraints: 'center, span 4, wrap', preferredSize: [300,30])
             label(icon: bind{model.loader.catalogs}, constraints: 'center')
             label(icon: bind{model.loader.speakers}, constraints: 'center')
             label(icon: bind{model.loader.presentations}, constraints: 'center')
             label(icon: bind{model.loader.schedule}, constraints: 'center')
+            progress.start()
         }
     }
 
@@ -108,5 +110,5 @@ application(title: 'Devoxx 2010',
         }
     }
 
-    swingRepaintTimeline(main, id: 'mainTimeline', loop: true)
+    swingRepaintTimeline(main, loop: true)
 }

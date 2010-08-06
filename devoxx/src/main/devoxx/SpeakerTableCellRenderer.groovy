@@ -50,12 +50,12 @@ class SpeakerTableCellRenderer extends JPanel implements TableCellRenderer {
         this.builder = builder
         final self = this
         builder.panel(self) {
-            migLayout(layoutConstraints: 'fill', columnConstraints: '[left][left, grow]')
-            self.speakerPicture = label(icon: imageIcon('/speaker-icon.gif', constraints: 'top, gap left 5, span 1 2'))
-            self.speakerName = label('', constraints: 'top, grow')
-            self.speakerCompany = label('', constraints: 'top, right, wrap')
+            migLayout(layoutConstraints: 'fill', columnConstraints: '[left][left]', rowConstraints: '[top][top]')
+            self.speakerPicture = label(icon: imageIcon('/speaker-icon.gif', constraints: 'gap right 10, span 1 2'))
+            self.speakerName = label('', constraints: 'grow')
+            self.speakerCompany = label('', constraints: 'right, wrap')
             self.speakerBio = textArea('', opaque: false, editable: false, lineWrap: true,
-                              wrapStyleWord: true, constraints: 'top, grow, span 2')
+                              wrapStyleWord: true, constraints: 'grow, span 2')
         }
     }
 
