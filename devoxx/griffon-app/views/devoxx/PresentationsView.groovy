@@ -16,6 +16,7 @@ presentationsMatcherEditor = new TextComponentMatcherEditor(
       baseList << info.summary
       baseList << info.track
       baseList << info.speaker
+      baseList << info.type
       baseList << info.experience.toLowerCase()
    } as TextFilterator
 )
@@ -56,8 +57,8 @@ noparent {
 }
 
 panel(id: 'box', opaque: false) {
-    migLayout(layoutConstraints: 'fill')
-    label(icon: crystalIcon(size: 32, category: type.icon.category, icon: type.icon.name),
+    migLayout(layoutConstraints: 'insets 0 0 0 0, fill')
+    label(icon: crystalIcon(size: 22, category: type.icon.category, icon: type.icon.name),
           constraints: 'left, top, grow',
           text: bind('size', source: model, converter: {v -> "${type.description} (${v})".toString()}))
     widget(presentationSearch, columns: 20, constraints: 'right, top, wrap')

@@ -2,12 +2,14 @@ package devoxx
 
 import java.awt.Color
 import java.awt.Component
+import java.awt.Dimension
 import javax.swing.JTable
 import javax.swing.JPanel
 import javax.swing.table.TableCellRenderer
 import javax.swing.table.DefaultTableCellRenderer
 
 class PresentationTableCellRenderer extends JPanel implements TableCellRenderer {
+    private presentationExperience
     private presentationTitle
     private presentationSpeaker
     private presentationTrack
@@ -23,14 +25,19 @@ class PresentationTableCellRenderer extends JPanel implements TableCellRenderer 
         Map presentationsType = Constants.TYPES.presentations
 
         builder.panel(self, opaque: true) {
-            migLayout(columnConstraints: '[left, grow][right]')
-            self.presentationTitle = label('', opaque: false, constraints: 'top')
-            self.presentationType = label('', opaque: false, constraints: 'top, grow, wrap')
-            self.presentationSpeaker = label('', opaque: false, constraints: 'top, grow',
-                icon: builder.crystalIcon(size: 16, category: speakersType.icon.category, icon: speakersType.icon.name))
-            self.presentationTrack = label('', opaque: false, constraints: 'top, wrap')
+            migLayout(layoutConstraints: 'fill', columnConstraints: '[][left][right]', rowConstraints: '[top][top][top]')
+            self.presentationExperience = label(opaque: false, icon: imageIcon('/transparent-16x16.png'))
+            self.presentationTitle = textArea('', opaque: false, editable: false, lineWrap: true,
+                wrapStyleWord: true, constraints: 'grow')
+            self.presentationType = label('', opaque: false, constraints: 'wrap')
+
+            label(icon: crystalIcon(size: 16, category: speakersType.icon.category, icon: speakersType.icon.name))
+            self.presentationSpeaker = label('', opaque: false)
+            self.presentationTrack = label('', opaque: false, constraints: 'wrap')
+
+            label(opaque: false, icon: imageIcon('/transparent-16x16.png'))
             self.presentationSummary = textArea('', opaque: false, editable: false, lineWrap: true,
-                wrapStyleWord: true, constraints: 'top, grow, span 2')
+                wrapStyleWord: true, constraints: 'grow, span 2')
         }
     }
 
@@ -40,8 +47,8 @@ class PresentationTableCellRenderer extends JPanel implements TableCellRenderer 
         Map exp = Constants.EXPERIENCE[value.experience.toLowerCase()]
 
         border = widget.border
+        presentationExperience.icon = builder.crystalIcon(size: '16', category: exp.icon.category, icon: exp.icon.name)
         presentationTitle.text = value.title
-        presentationTitle.icon = builder.crystalIcon(size: '16', category: exp.icon.category, icon: exp.icon.name)
         presentationSpeaker.text = value.speaker
         presentationTrack.text = value.track
         presentationType.text = value.type

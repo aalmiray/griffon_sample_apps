@@ -29,7 +29,7 @@ actions {
 
 application(title: 'Devoxx 2010',
   size: [800,600], undecorated: true,
-  locationByPlatform:true,
+  locationByPlatform:true, resizable: false,
   iconImage: imageIcon('/griffon-icon-48x48.png').image,
   iconImages: [imageIcon('/griffon-icon-48x48.png').image,
                imageIcon('/griffon-icon-32x32.png').image,

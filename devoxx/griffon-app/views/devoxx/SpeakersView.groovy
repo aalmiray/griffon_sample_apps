@@ -25,9 +25,6 @@ filteredSpeakers.addListEventListener({ e ->
 
 speakersTrackingSelectionModel = bean(new EventSelectionModel(filteredSpeakers),
    selectionMode: EventSelectionModel.SINGLE_SELECTION,)
-// speakersTrackingSelectionModel.addListSelectionListener([
-//    doWithSize: { int size -> model.size = size }
-// ] as ListSelectionSizeCalculator)
 
 def createSpeakersTableModel() {
    new EventTableModel(filteredSpeakers, [
@@ -57,13 +54,13 @@ noparent {
 }
 
 panel(id: 'box', opaque: false) {
-    migLayout(layoutConstraints: 'fill')
-    label(icon: crystalIcon(size: 32, category: type.icon.category, icon: type.icon.name),
+    migLayout(layoutConstraints: 'insets 0 0 0 0, fill')
+    label(icon: crystalIcon(size: 22, category: type.icon.category, icon: type.icon.name),
           constraints: 'left, top, grow',
           text: bind('size', source: model, converter: {v -> "${type.description} (${v})".toString()}))
     widget(speakerSearch, columns: 20, constraints: 'right, top, wrap')
     // add the multi-column header first
-    widget(speakersTable_copy.tableHeader, constraints: 'span 2, top, growx, wrap',
+    widget(speakersTable_copy.tableHeader, constraints: 'span 2, top, growx, gap bottom 0, wrap',
            resizingAllowed: false, reorderingAllowed: false)
     // then comes the real table
     scrollPane(id: 'speakersTableContainer', opaque: false, constraints: 'span 2, top, grow') {
