@@ -1,4 +1,4 @@
-import com.sun.opengl.util.Animator
+import com.jogamp.opengl.util.Animator
 
 application(title: 'Jogl',
   size:[300,300],
