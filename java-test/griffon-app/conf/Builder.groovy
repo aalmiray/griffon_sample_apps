@@ -7,8 +7,3 @@ root {
         view = '*'
     }
 }
-
-root.'ErlangGriffonAddon'.addon=true
-
-
-root.'ClojureGriffonAddon'.addon=true

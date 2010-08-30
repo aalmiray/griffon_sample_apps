@@ -17,6 +17,3 @@ log4j {
     }
     additivity.StackTrace=false
 }
-
-griffon.clojure.dynamicPropertyName = 'clj'
-griffon.clojure.injectInto = ['controller']
