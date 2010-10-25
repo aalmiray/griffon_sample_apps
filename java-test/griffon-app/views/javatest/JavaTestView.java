@@ -43,11 +43,10 @@ public class JavaTestView extends AbstractGriffonView {
     }
 
     public void mvcGroupInit(Map<String, ?> args) {
-        getApp().execSync(new Runnable() {
+        execSync(new Runnable() {
             public void run() {
                 JFrame view = new JFrame("java-test");
                 view.setIconImage(getImage("/griffon-icon-48x48.png"));
-                // uncomment the following lines if targeting +JDK6
                 view.setIconImages(java.util.Arrays.asList(
                     getImage("/griffon-icon-48x48.png"),
                     getImage("/griffon-icon-32x32.png"),

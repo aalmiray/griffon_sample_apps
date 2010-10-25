@@ -1,4 +1,4 @@
-Sample Griffon application that uses Java as the primray language for its
+Sample Griffon application that uses Java as the primary language for its
 Model, View and Controller implementations. Note that Groovy is still
 required at runtime as the lifecycle scripts and configuration files are
 still written in Groovy; also the Griffon runtime has some dependencies
@@ -33,6 +33,6 @@ as the primary language:
     | Totals               |     9 |    44 | 
     +----------------------+-------+-------+
 
-This application was boostraped with the following command
+This application was bootstraped with the following command
 
     griffon create-app javatest -fileType=java
