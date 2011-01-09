@@ -1,7 +1,8 @@
 package groovyedit
 
-import groovy.beans.Bindable
-import griffon.beans.Listener
+// auto import by default
+// import groovy.beans.Bindable
+// import griffon.beans.Listener
 import javax.swing.event.ChangeEvent
 import javax.swing.event.ChangeListener
 

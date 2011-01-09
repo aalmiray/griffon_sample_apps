@@ -1,6 +1,7 @@
 package groovyedit
 
-import groovy.beans.Bindable
+// auto import by default
+// import groovy.beans.Bindable
 
 class FilePanelModel {
    String mvcId

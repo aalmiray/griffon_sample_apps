@@ -1,5 +1,5 @@
 application {
-    title='J'
+    title='JME3 + Griffon'
     startupGroups = ['j']
 
     // Should Griffon exit when no Griffon created frames are showing?
@@ -13,9 +13,7 @@ mvcGroups {
     'j' {
         model = 'JModel'
         controller = 'JController'
-//        view = 'JView'
+        view = 'JView'
     }
 
 }
-
-jme.simpleGameDelegate = "MySimpleGameDelegate"

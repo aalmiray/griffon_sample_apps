@@ -1,19 +1,12 @@
 application {
-    title='LWJGL test'
-    startupGroups = ['l']
-
-    // Should Griffon exit when no Griffon created frames are showing?
-    autoShutdown = true
-
-    // If you want some non-standard application class, apply it here
-    //frameClass = 'javax.swing.JFrame'
+	title="LWJGL test"
+	startupGroups=["l"]
+	autoShutdown=true
 }
 mvcGroups {
-    // MVC Group for "l"
-    'l' {
-        model = 'LModel'
-        controller = 'LController'
-        view = 'LView'
-    }
-
+	l {
+		model="LModel"
+		controller="LController"
+		view="LView"
+	}
 }

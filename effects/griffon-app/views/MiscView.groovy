@@ -1,5 +1,6 @@
 import griffon.effects.Effects
 import griffon.effects.EffectUtil
+import griffon.swing.SwingUtils
 
 Closure resetWin = {w, p -> 
     parentModel.reset()
@@ -27,9 +28,15 @@ actions {
         enabled: bind{!parentModel.animating},
         closure: {
             parentModel.animating = true
+            Effects.fade(model.properties, target){w, p ->
+                w.visible = true
+                SwingUtils.setWindowOpacity(w, 1.0f)
+            }
+            /*
             Effects.fade(model.properties, target){w, p -> Effects.appear(w) {t, a ->
                 parentModel.animating = false
             }}
+            */
         })
 }
 

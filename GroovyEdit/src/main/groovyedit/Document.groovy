@@ -1,5 +1,6 @@
 package groovyedit
 
+// auto import only works with Griffon artifacts
 import groovy.beans.Bindable
 
 @Bindable

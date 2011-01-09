@@ -7,6 +7,6 @@ root {
         view = '*'
     }
 }
-root.'JoglGriffonAddon'.addon=true
 
 root.'WorldwindGriffonAddon'.addon=true
+root.'JoglCompatGriffonAddon'.addon=true

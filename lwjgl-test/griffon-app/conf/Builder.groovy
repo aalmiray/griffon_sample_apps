@@ -7,6 +7,8 @@ root {
         view = '*'
     }
 }
-root.'LwjglGriffonAddon'.addon=true
 
 root.'griffon.builder.trident.TridentBuilder'.view = '*'
+
+
+root.'LwjglGriffonAddon'.addon=true

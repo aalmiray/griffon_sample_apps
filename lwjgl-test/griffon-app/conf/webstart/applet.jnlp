@@ -47,8 +47,8 @@
       documentbase="@griffonAppCodebase@"
       name="@griffonAppName@Applet"
       main-class="@griffonAppletClass@"
-      width="320"
-      height="640">
+      width="300"
+      height="300">
       <!-- params are ignored when referenced from web page for 6u10 -->
     <!--<param name="key1" value="value1"/>-->
     <!--<param name="key2" value="value2"/>-->

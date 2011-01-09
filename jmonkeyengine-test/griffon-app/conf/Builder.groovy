@@ -7,6 +7,6 @@ root {
         view = '*'
     }
 }
-root.'LwjglGriffonAddon'.addon=true
 
+root.'LwjglGriffonAddon'.addon=true
 root.'JmonkeyengineGriffonAddon'.addon=true

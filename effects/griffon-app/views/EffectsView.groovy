@@ -32,12 +32,18 @@ actions {
 }
 
 application(title: 'Effects', id: 'window',
-  size: [width, height], undecorated: true,
+  size: [width, height], undecorated: false,
   locationByPlatform: true,
   iconImage: imageIcon('/griffon-icon-48x48.png').image,
   iconImages: [imageIcon('/griffon-icon-48x48.png').image,
                imageIcon('/griffon-icon-32x32.png').image,
                imageIcon('/griffon-icon-16x16.png').image]) {
+    menuBar {
+        menu('Actions') {
+            menuItem(resetAction)
+        }
+    }
+
     panel {
         migLayout(layoutConstraints: 'fill',
                   columnConstraints: '2%[left 20%]2%[center]2%[right 20%]2%',

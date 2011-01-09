@@ -8,4 +8,5 @@ root {
     }
 }
 
+
 root.'JoglGriffonAddon'.addon=true

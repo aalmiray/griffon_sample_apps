@@ -1,5 +1,5 @@
-import groovy.beans.Bindable
+import com.jme3.scene.Geometry
 
 class JModel {
-   // @Bindable String propName
+   Geometry cube
 }
