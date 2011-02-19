@@ -20,15 +20,15 @@ al error ocurrido seria presentado al usuario)
 
 El numero total de lineas de codigo por artefacto es el siguiente
 
- +----------------------+-------+-------+
- | Name                 | Files |  LOC  |
- +----------------------+-------+-------+
- | Models               |     1 |     6 | 
- | Views                |     1 |    38 | 
- | Controllers          |     1 |    48 | 
- | Lifecycle            |     5 |     5 | 
- | Integration Tests    |     1 |    14 | 
- +----------------------+-------+-------+
- | Totals               |     9 |   111 | 
- +----------------------+-------+-------+
+>  +----------------------+-------+-------+
+>  | Name                 | Files |  LOC  |
+>  +----------------------+-------+-------+
+>  | Models               |     1 |     6 | 
+>  | Views                |     1 |    38 | 
+>  | Controllers          |     1 |    48 | 
+>  | Lifecycle            |     5 |     5 | 
+>  | Integration Tests    |     1 |    14 | 
+>  +----------------------+-------+-------+
+>  | Totals               |     9 |   111 | 
+>  +----------------------+-------+-------+
 
