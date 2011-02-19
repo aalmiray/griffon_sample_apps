@@ -7,11 +7,10 @@ de la interfaz de servicios REST que Flickr expone segun se explica en
 
 La aplicacion demuestra como es que varios plugins ayudan a la creacion
 de la misma, en concreto:
-- rest: realizar llamadas de red usando el mecanismo REST
-- miglayout: organizar los components visuales con MigLayout
-- jbusycomponent: presenta un estrobo de espera
-- transitions: transiciones animadas entre imagen e imagen
-
+  * rest: realizar llamadas de red usando el mecanismo REST
+  * miglayout: organizar los components visuales con MigLayout
+  * jbusycomponent: presenta un estrobo de espera
+  * transitions: transiciones animadas entre imagen e imagen
 
 Es necesario resaltar que la aplicacion no se hace cargo de todos los
 errores que puedieren ocurrir, como por ejemplo una falla en la 
