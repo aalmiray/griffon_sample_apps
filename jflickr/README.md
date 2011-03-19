@@ -40,5 +40,7 @@ version, I also spent almost thrice the time to build it. I had to
 battle the type system and compiler, besides processing the XML response
 from the flickr APIs. Whereas in the Groovy version I had to battle
 the flickr APIs only, but RESTClient and GPath made that job an easier
-one. Bear in mind I built the Groovy version first so I already knew
-what to expected results were before undertaking the Java version.
+one.
+
+Bear in mind I built the Groovy version first so I already knew
+what the expected results were before undertaking the Java version.
