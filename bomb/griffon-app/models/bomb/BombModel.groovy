@@ -1,0 +1,3 @@
+package bomb
+
+class BombModel {}
