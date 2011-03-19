@@ -1,0 +1,22 @@
+<application title="app.config.application.title"
+             pack="true"
+             locationByPlatform="true">
+   <busyComponent id="jflickr.JflickrView.ID_BUSY">
+      <panel>
+         <migLayout layoutConstraints="'fill'" rowConstraints="'top'"/>
+         <label text="'Tag'"/>
+         <textField id="jflickr.JflickrView.ID_SEARCH_FIELD"
+                    columns="30" constraints="'growx'"/>
+         <button action="getVariable(jflickr.JflickrView.ID_SEARCH_ACTION)" constraints="'right, wrap'"/>
+         <panel constraints="'span 3, grow'">
+            <migLayout layoutConstraints="'fill'" rowConstraints="'top'"/>
+            <button action="getVariable(jflickr.JflickrView.ID_PREVIOUS_ACTION)" constraints="'left'"/>
+            <button action="getVariable(jflickr.JflickrView.ID_NEXT_ACTION)" constraints="'right, wrap'"/>
+            <panel id="jflickr.JflickrView.ID_PHOTOS" constraints="'span 2, grow'">
+               <transitionLayout/>
+            </panel>
+         </panel>
+      </panel>
+   </busyComponent>
+   <swingRepaintTimeline target="getVariable(jflickr.JflickrView.ID_PHOTOS)" loop="true"/>
+</application>
