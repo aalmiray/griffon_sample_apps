@@ -25,10 +25,10 @@ El numero total de lineas de codigo por artefacto es el siguiente:
      +----------------------+-------+-------+
      | Models               |     1 |     6 | 
      | Views                |     1 |    38 | 
-     | Controllers          |     1 |    48 | 
+     | Controllers          |     1 |    28 | 
+     | Services             |     1 |    23 | 
      | Lifecycle            |     5 |     5 | 
-     | Integration Tests    |     1 |    14 | 
      +----------------------+-------+-------+
-     | Totals               |     9 |   111 | 
+     | Totals               |     9 |   100 | 
      +----------------------+-------+-------+
 

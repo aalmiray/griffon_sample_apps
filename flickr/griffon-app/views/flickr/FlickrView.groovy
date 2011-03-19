@@ -4,13 +4,13 @@ actions {
    action(id: 'searchAction',
       name: 'Search',
       enabled: bind('tag', source: model, converter: {!GriffonNameUtils.isBlank(it)}),
-      closure: controller.search)
+      closure: controller.searchAction)
    action(id: 'previousAction',
       name: '<<',
-      closure: controller.showPrevious)
+      closure: {photos.layout.previous(photos)})
    action(id: 'nextAction',
       name: '>>',
-      closure: controller.showNext)
+      closure: {photos.layout.next(photos)})
 }
 
 application(title: 'flickr',
