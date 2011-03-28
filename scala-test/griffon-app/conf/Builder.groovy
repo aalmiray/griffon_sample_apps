@@ -7,5 +7,3 @@ root {
         view = '*'
     }
 }
-root.'NuvolaiconsGriffonAddon'.addon=true
-

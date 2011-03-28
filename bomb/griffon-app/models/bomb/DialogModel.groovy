@@ -1,5 +1,6 @@
 package bomb
 
 class DialogModel {
-    @Bindable String message
+    @Bindable String title = 'Error'
+    @Bindable String message = ''
 }

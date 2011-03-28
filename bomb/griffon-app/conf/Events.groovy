@@ -3,6 +3,7 @@ import griffon.core.GriffonApplication
 
 onUncaughtBombException = { x ->
     withMvcGroup('dialog') { m, v, c ->
+        m.title = 'Somebody setup us the bomb!'
         m.message = """
             Oops! An unexpected error occurred and we do not
             know what to do with it. However instead of
