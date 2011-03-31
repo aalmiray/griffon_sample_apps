@@ -1,7 +1,7 @@
-import math.*
+import babel.math.*
+import griffon.jython.JythonObjectFactory
 
 class BabelController {
-    def model
     def view
 
     void mvcGroupInit(Map args) {
@@ -15,12 +15,19 @@ class BabelController {
             title: 'Clojure',
             calculator: new ClojureCalculator()
         ])
-/*
         createMVCGroup('calculator', 'erlang', [
             tabGroup: view.tabGroup,
             title: 'Erlang',
             calculator: new ErlangCalculator()
         ])
-*/
+        createMVCGroup('calculator', 'jython', [
+            tabGroup: view.tabGroup,
+            title: 'Jython',
+            calculator: newJythonCalculator()
+        ])
+    }
+
+    private newJythonCalculator() {
+        new JythonObjectFactory(Calculator, 'JythonCalculator', 'JythonCalculator').createObject()
     }
 }

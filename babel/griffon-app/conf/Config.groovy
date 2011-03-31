@@ -20,3 +20,7 @@ log4j {
 
 griffon.clojure.dynamicPropertyName = 'clj'
 griffon.clojure.injectInto = ['controller']
+
+griffon.jython.dynamicPropertyName = 'py'
+
+griffon.jython.injectInto = ['controller']

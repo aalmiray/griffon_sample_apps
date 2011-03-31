@@ -35,7 +35,7 @@ class ScalaView extends AbstractGriffonView {
         title = "Griffon + Scala"
         contents = new GridPanel(3, 1) {
             val input = new TextField{ columns = 20 }
-            val output = new TextField{ columns = 20 }
+            val output = new TextField{ columns = 20; editable = false }
 
             contents += input
             contents += button

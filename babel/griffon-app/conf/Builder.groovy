@@ -12,3 +12,7 @@ root.'ErlangGriffonAddon'.addon=true
 
 
 root.'ClojureGriffonAddon'.addon=true
+
+root.'MiglayoutGriffonAddon'.addon=true
+
+root.'JythonGriffonAddon'.addon=true

@@ -1,7 +1,6 @@
-import net.miginfocom.swing.MigLayout
-
 tabbedPane(tabGroup) {
-  panel(title: title, layout: new MigLayout('fill', '5%[right]10%[left]5%')) {
+  panel(title: title) {
+    migLayout(layoutConstraints: 'fill', columnConstraints: '5%[right]10%[left]5%')
     label 'Number A:'
     textField columns: 10, text: bind('numbera', target: model), constraints: 'wrap'
     label 'Number B:'
