@@ -38,7 +38,7 @@ public class JflickrView extends AbstractGriffonView {
         this.model = model;
     }
     
-    public void mvcGroupInit(Map<String, ?> args) {
+    public void mvcGroupInit(Map<String, Object> args) {
         setupActions();
         
         buildViewFromXml(args);
@@ -60,8 +60,7 @@ public class JflickrView extends AbstractGriffonView {
                  .withTargetProperty("enabled")
                  .withSource(model)
                  .withSourceProperty(JflickrModel.PROP_TAG).withConverter(new CallableWithArgs<Boolean>() {
-                     public Boolean call() throws Exception {
-                         Object[] args = getArgs();
+                     public Boolean call(Object[] args) {
                          return args.length > 0 ? !GriffonNameUtils.isBlank(String.valueOf(args[0])) : Boolean.FALSE;
                      }
                  })

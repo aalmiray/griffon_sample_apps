@@ -13,8 +13,8 @@ class ErlangCalculator implements Calculator {
 
     private connect() {
         if(conn) return
-        OtpSelf cNode = new OtpSelf("clientnode", "cookie")
-        OtpPeer sNode = new OtpPeer("servernode@aalmiray.canoo.com") 
+        OtpSelf cNode = new OtpSelf('clientnode', 'cookie')
+        OtpPeer sNode = new OtpPeer("servernode@${InetAddress.localHost.hostName}") 
         conn = cNode.connect(sNode)
     }
 }

@@ -9,9 +9,7 @@ root {
 }
 root.'MiglayoutGriffonAddon'.addon=true
 
-root.'griffon.builder.trident.TridentBuilder'.view = '*'
 
-root.'TransitionsGriffonAddon'.addon=true
 
 jx {
     'groovy.swing.SwingXBuilder' {
@@ -21,4 +19,11 @@ jx {
 
 root.'JxlayerGriffonAddon'.addon=true
 
-root.'JBusyComponentGriffonAddon'.addon=true
+
+root.'RestGriffonAddon'.addon=true
+
+root.'JbusyComponentGriffonAddon'.addon=true
+
+root.'griffon.builder.trident.TridentBuilder'.view = '*'
+
+root.'TransitionsGriffonAddon'.addon=true

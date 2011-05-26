@@ -17,9 +17,12 @@ jx {
 
 root.'JxlayerGriffonAddon'.addon=true
 
-root.'JBusyComponentGriffonAddon'.addon=true
 
 root.'MiglayoutGriffonAddon'.addon=true
+
+
+
+root.'JbusyComponentGriffonAddon'.addon=true
 
 root.'griffon.builder.trident.TridentBuilder'.view = '*'
 
