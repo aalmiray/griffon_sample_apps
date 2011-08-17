@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!DOCTYPE math PUBLIC "-//W3C//DTD MathML 2.0//EN" "http://www.w3.org/TR/MathML2/dtd/mathml2.dtd">
+<math>
+  <mrow>
+    <mi>x</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <mtable>
+        <mtr>
+          <mtd columnalign="center">
+            <mrow>
+              <mrow>
+                <mo>{</mo>
+                <mtable>
+                  <mtr>
+                    <mtd columnalign="center">
+                      <mrow>
+                        <msub>
+                          <mi>x</mi>
+                          <mrow>
+                            <mn>11</mn>
+                          </mrow>
+                        </msub>
+                      </mrow>
+                    </mtd>
+                    <mtd columnalign="center">
+                      <mrow>
+                        <msub>
+                          <mi>x</mi>
+                          <mrow>
+                            <mn>12</mn>
+                          </mrow>
+                        </msub>
+                      </mrow>
+                    </mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd columnalign="center">
+                      <mrow>
+                        <msub>
+                          <mi>x</mi>
+                          <mrow>
+                            <mn>21</mn>
+                          </mrow>
+                        </msub>
+                      </mrow>
+                    </mtd>
+                    <mtd columnalign="center">
+                      <mrow>
+                        <msub>
+                          <mi>x</mi>
+                          <mrow>
+                            <mn>22</mn>
+                          </mrow>
+                        </msub>
+                      </mrow>
+                    </mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd columnalign="center">
+                      <mrow>
+                        <msub>
+                          <mi>y</mi>
+                          <mrow>
+                            <mn>1</mn>
+                          </mrow>
+                        </msub>
+                      </mrow>
+                    </mtd>
+                    <mtd columnalign="center">
+                      <mrow>
+                        <msub>
+                          <mi>y</mi>
+                          <mrow>
+                            <mn>2</mn>
+                          </mrow>
+                        </msub>
+                      </mrow>
+                    </mtd>
+                  </mtr>
+                </mtable>
+                <mo>}</mo>
+              </mrow>
+            </mrow>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd columnalign="center">
+            <mrow>
+              <mi>z</mi>
+            </mrow>
+          </mtd>
+        </mtr>
+      </mtable>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <msubsup>
+      <mrow>
+        <mo>[</mo>
+        <mo>&#x222B;</mo>
+        <mo>+</mo>
+        <mo>&#x222B;</mo>
+        <mo>]</mo>
+      </mrow>
+      <mrow>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mrow>
+      <mrow>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+    </msubsup>
+    <mo>=</mo>
+    <munder>
+      <mrow>
+        <munder>
+          <mrow>
+            <mi>a</mi>
+            <mo>+</mo>
+            <mover>
+              <mrow>
+                <mover>
+                  <mrow>
+                    <mi>b</mi>
+                    <mo>+</mo>
+                    <mo>&#x2026;</mo>
+                    <mo>+</mo>
+                    <mi>y</mi>
+                  </mrow>
+<!--mrow-->
+                  <mo>&#xFE37;</mo>
+<!--/mrow-->
+                </mover>
+              </mrow>
+              <mrow>
+                <mn>123</mn>
+              </mrow>
+            </mover>
+            <mo>+</mo>
+            <mi>z</mi>
+          </mrow>
+<!--mrow-->
+          <mo>&#xFE38;</mo>
+<!--/mrow-->
+        </munder>
+      </mrow>
+      <mrow>
+        <mi>a</mi>
+        <mi>b</mi>
+        <mi>c</mi>
+      </mrow>
+    </munder>
+  </mrow>
+</math>

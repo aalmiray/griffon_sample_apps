@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE math PUBLIC "-//W3C//DTD MathML 2.0//EN" "http://www.w3.org/TR/MathML2/dtd/mathml2.dtd">
+<math mode="display">
+  <mrow>
+    <mo stretchy="false">{</mo>
+    <munder>
+      <mrow>
+        <mover>
+          <mrow>
+            <mpadded width="0"/>
+<!--mpadded width="0">(</mpadded-->
+<!-- \mathstrut -ugly hack a la TeX -->
+            <mi>a</mi>
+            <mo>,</mo>
+            <mo>...</mo>
+            <mo>,</mo>
+            <mi>a</mi>
+          </mrow>
+          <mover>
+            <mo>&#xFE37;</mo>
+            <mrow>
+              <mi>k</mi>
+              <mtext>&#xA0;</mtext>
+              <mi>a</mi>
+              <mtext>'s</mtext>
+            </mrow>
+          </mover>
+        </mover>
+        <mo>,</mo>
+        <mover>
+          <mrow>
+            <mpadded/>
+<!--mpadded width="0">(</mpadded-->
+<!-- \mathstrut -ugly hack a la TeX -->
+            <mi>b</mi>
+            <mo>,</mo>
+            <mo>...</mo>
+            <mo>,</mo>
+            <mi>b</mi>
+          </mrow>
+          <mover>
+            <mo>&#xFE37;</mo>
+            <mrow>
+              <mi>&#x2113;</mi>
+              <mtext>&#xA0;</mtext>
+              <mi>b</mi>
+              <mtext>'s</mtext>
+            </mrow>
+          </mover>
+        </mover>
+      </mrow>
+      <munder>
+        <mo>&#xFE38;</mo>
+        <mrow>
+          <mi>k</mi>
+          <mo>+</mo>
+          <mi>&#x2113;</mi>
+          <mtext>&#xA0;elements</mtext>
+        </mrow>
+      </munder>
+    </munder>
+    <mo stretchy="false">}</mo>
+  </mrow>
+</math>

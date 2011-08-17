@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE math PUBLIC "-//W3C//DTD MathML 2.0//EN" "http://www.w3.org/TR/MathML2/dtd/mathml2.dtd">
+<math mode="display">
+  <mrow>
+    <mo>(</mo>
+    <mtable>
+      <mtr>
+        <mtd columnalign="center">
+          <mrow>
+            <mo>(</mo>
+            <mtable>
+              <mtr>
+                <mtd columnalign="center">
+                  <mi>a</mi>
+                </mtd>
+                <mtd columnalign="center">
+                  <mi>b</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="center">
+                  <mi>c</mi>
+                </mtd>
+                <mtd columnalign="center">
+                  <mi>d</mi>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo>)</mo>
+          </mrow>
+        </mtd>
+        <mtd columnalign="center">
+          <mrow>
+            <mo>(</mo>
+            <mtable>
+              <mtr>
+                <mtd columnalign="center">
+                  <mi>e</mi>
+                </mtd>
+                <mtd columnalign="center">
+                  <mi>f</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="center">
+                  <mi>g</mi>
+                </mtd>
+                <mtd columnalign="center">
+                  <mi>h</mi>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo>)</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd columnalign="center">
+          <mn>0</mn>
+        </mtd>
+        <mtd columnalign="center">
+          <mrow>
+            <mo>(</mo>
+            <mtable>
+              <mtr>
+                <mtd columnalign="center">
+                  <mi>i</mi>
+                </mtd>
+                <mtd columnalign="center">
+                  <mi>j</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="center">
+                  <mi>k</mi>
+                </mtd>
+                <mtd columnalign="center">
+                  <mi>l</mi>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo>)</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo>)</mo>
+  </mrow>
+</math>

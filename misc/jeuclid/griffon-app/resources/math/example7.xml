@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE math PUBLIC "-//W3C//DTD MathML 2.0//EN" "http://www.w3.org/TR/MathML2/dtd/mathml2.dtd">
+<math mode="display">
+  <msubsup>
+    <mi>x</mi>
+    <msubsup>
+      <mi>y</mi>
+      <mi>b</mi>
+      <mi>a</mi>
+    </msubsup>
+    <msubsup>
+      <mi>z</mi>
+      <mi>c</mi>
+      <mi>d</mi>
+    </msubsup>
+  </msubsup>
+</math>

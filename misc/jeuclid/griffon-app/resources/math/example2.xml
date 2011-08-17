@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE math PUBLIC "-//W3C//DTD MathML 2.0//EN" "http://www.w3.org/TR/MathML2/dtd/mathml2.dtd">
+<math mode="display">
+  <mrow>
+    <mo>(</mo>
+    <mfrac linethickness="1">
+      <mrow>
+        <mi>h</mi>
+      </mrow>
+      <mrow>
+        <mi>k</mi>
+        <mo>/</mo>
+        <mn>2</mn>
+      </mrow>
+    </mfrac>
+    <mo>)</mo>
+  </mrow>
+</math>
