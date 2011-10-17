@@ -1,0 +1,12 @@
+root {
+    'groovy.swing.SwingBuilder' {
+        controller = ['Threading']
+        view = '*'
+    }
+    'griffon.app.ApplicationBuilder' {
+        view = '*'
+    }
+}
+root.'GlazedlistsGriffonAddon'.addon=true
+
+root.'Db4oGriffonAddon'.addon=true

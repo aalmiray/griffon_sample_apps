@@ -7,4 +7,6 @@ root {
         view = '*'
     }
 }
+root.'GlazedlistsGriffonAddon'.addon=true
+
 root.'Neo4jGriffonAddon'.addon=true

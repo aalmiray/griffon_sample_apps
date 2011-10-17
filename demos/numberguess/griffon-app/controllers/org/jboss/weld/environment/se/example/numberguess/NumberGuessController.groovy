@@ -31,7 +31,7 @@ class NumberGuessController {
         update()
         
         if(game.gameWon || game.gameLost) {    
-            execAsync { view.switchButtons() }
+             view.switchButtons() 
         }
     }
 
