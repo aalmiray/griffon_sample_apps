@@ -1,7 +1,6 @@
 Simple Wizard
 =============
 
-12345678901234567890123456789012345678901234567890123456789012345678901234567890
 This application demonstrates how a trivial wizard-like bahavior can be created.
 All pages are instantiated upon launching the wizard, in other words there is no
 lazy page instantiation nor support for adding new pages dynamically. Branching
