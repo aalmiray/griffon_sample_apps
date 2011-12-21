@@ -12,7 +12,7 @@ class SampleController {
             ViewResult<Map> result = db.listDocuments(null, null)
             result.rows.each { row ->
                 Map json = db.getDocument(Map, row.id)
-println json
+
                 tmpList << new Person(
                     id: json.id,
                     name: json.name,
