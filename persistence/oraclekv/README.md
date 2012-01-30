@@ -9,7 +9,7 @@ Follow these steps to compile and launche the application:
 
     java -jar lib/kvstore-1.2.123.jar kvlite
 
-4. Make sure griffonw (or griffon.bat if on Windows) has executable permissions
+4. Make sure griffonw (or griffonw.bat if on Windows) has executable permissions
 5. Execute the following command
 
     ./griffonw run-app
