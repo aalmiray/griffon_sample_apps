@@ -2,25 +2,28 @@ package sample
 
 import groovy.beans.Bindable
 import griffon.transform.PropertyListener
-import java.beans.PropertyChangeListener
 
-@PropertyListener(downstreamUpdater)
-class PersonPM extends Person {
-    @Bindable @PropertyListener(upstreamUdater)
-    Person person = new Person()
+@PropertyListener(propertyUpdater)
+class PersonPM {
+    // attributes
+    @Bindable String name
+    @Bindable String lastName
+    @Bindable String address
     
-    private upstreamUdater = { e ->
-        e.oldValue?.removePropertyChangeListener(propertyUpdater)
-        e.newValue?.removePropertyChangeListener(propertyUpdater)
-        e.newValue?.copyTo(owner)
-    }
+    // model reference
+    @Bindable Person person = new Person()
     
-    private downstreamUpdater = { e ->
-        if(e.propertyName == 'person') return
-        if(person) person[e.propertyName] = e.newValue
-    }
+    static final List<String> PROPERTIES = ['name', 'lastName', 'address']
     
     private propertyUpdater = { e ->
-        owner[e.propertyName] = e.newValue
-    } as PropertyChangeListener
+        if(e.propertyName == 'person') {
+            for(property in PROPERTIES) {
+                delegate[property] = e.newValue != null ? e.newValue[property] : null
+            }
+        } else if(person) {
+            person[e.propertyName] = e.newValue
+        }
+    }
+
+    String toString() { "$name $lastName" }
 }

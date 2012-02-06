@@ -15,18 +15,18 @@ application(title: 'sample',
          keyReleased: { e ->  // enter/return key
              if (e.keyCode != KeyEvent.VK_ENTER) return
              int index = e.source.selectedIndex
-             if (index > -1) model.personSelected(index)
+             if (index > -1) model.selectedIndex = index
          },
          mouseClicked: { e -> // double click
              if (e.clickCount != 2) return
              int index = e.source.locationToIndex(e.point)
-             if (index > -1) model.personSelected(index)
+             if (index > -1) model.selectedIndex = index
          })
     panel(id: 'formContainer', constraints: 'center, grow') {
         migLayout(layoutConstraints: 'fill')
         ['name', 'lastName', 'address'].each { propName ->
             label(text: GriffonNameUtils.getNaturalName(propName) + ':', constraints: 'right')
-            textField(columns: 30, text: bind(propName, source: model.personPM, mutual: true), constraints: 'grow, wrap')
+            textField(columns: 30, text: bind(propName, source: model.currentPerson, mutual: true), constraints: 'grow, wrap')
         }
     }
 }

@@ -104,20 +104,20 @@ griffon {
     doc {
         logo = '<a href="http://griffon.codehaus.org" target="_blank"><img alt="The Griffon Framework" src="../img/griffon.png" border="0"/></a>'
         sponsorLogo = "<br/>"
-        footer = "<br/><br/>Made with Griffon (@griffon.version@)"
+        footer = "<br/><br/>Made with Griffon (0.9.5-SNAPSHOT)"
     }
 }
 
 deploy {
     application {
-        title = 'List 0.1'
+        title = '@griffonAppName@ @griffonAppVersion@'
         vendor = System.properties['user.name']
-        homepage = 'http://localhost/List'
+        homepage = 'http://localhost/@griffonAppName@'
         description {
-            complete = 'List 0.1'
-            oneline  = 'List 0.1'
-            minimal  = 'List 0.1'
-            tooltip  = 'List 0.1'
+            complete = '@griffonAppName@ @griffonAppVersion@'
+            oneline  = '@griffonAppName@ @griffonAppVersion@'
+            minimal  = '@griffonAppName@ @griffonAppVersion@'
+            tooltip  = '@griffonAppName@ @griffonAppVersion@'
         }
         icon {
             'default' {
@@ -185,14 +185,10 @@ log4j = {
         console name: 'stdout', layout: pattern(conversionPattern: '%d [%t] %-5p %c - %m%n')
     }
 
-    error 'org.codehaus.griffon'
-    error 'org.springframework',
+    error 'org.codehaus.griffon',
+          'org.springframework',
           'org.apache.karaf',
           'groovyx.net'
     warn  'griffon'
 }
 
-
-app.fileType = '.groovy'
-
-app.defaultPackageName = 'sample'
