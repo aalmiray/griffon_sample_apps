@@ -8,7 +8,7 @@ class SampleController {
    def model
 
    def onStartupEnd = { app ->
-      withCarbonado { Repository repository ->
+      withCarbonado { String repositoryName, Repository repository ->
          List<Person> tmpList = []
          Storage<Person> people = repository.storageFor(Person)
          Cursor<Person> peopleCursor = people.query().fetch()

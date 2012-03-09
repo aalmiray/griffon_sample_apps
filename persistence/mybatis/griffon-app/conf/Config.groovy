@@ -13,5 +13,3 @@ log4j = {
            'griffon.app'
 }
 
-
-griffon.basic_injection.disable = true

@@ -1,3 +1,3 @@
 package sample;
 
-public class Person extends activejdbc.Model { }
+public class Person extends org.javalite.activejdbc.Model { }

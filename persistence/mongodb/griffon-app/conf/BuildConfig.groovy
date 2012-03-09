@@ -51,6 +51,7 @@ griffon {
     memory {
         //max = '64m'
         //min = '2m'
+        //minPermSize = '2m'
         //maxPermSize = '64m'
     }
     jars {
@@ -104,20 +105,20 @@ griffon {
     doc {
         logo = '<a href="http://griffon.codehaus.org" target="_blank"><img alt="The Griffon Framework" src="../img/griffon.png" border="0"/></a>'
         sponsorLogo = "<br/>"
-        footer = "<br/><br/>Made with Griffon (0.9.5-SNAPSHOT)"
+        footer = "<br/><br/>Made with Griffon (@griffon.version@)"
     }
 }
 
 deploy {
     application {
-        title = '@griffonAppName@ @griffonAppVersion@'
+        title = "${appName} ${appVersion}"
         vendor = System.properties['user.name']
-        homepage = 'http://localhost/@griffonAppName@'
+        homepage = "http://localhost/${appName}"
         description {
-            complete = '@griffonAppName@ @griffonAppVersion@'
-            oneline  = '@griffonAppName@ @griffonAppVersion@'
-            minimal  = '@griffonAppName@ @griffonAppVersion@'
-            tooltip  = '@griffonAppName@ @griffonAppVersion@'
+            complete = "${appName} ${appVersion}"
+            oneline  = "${appName} ${appVersion}"
+            minimal  = "${appName} ${appVersion}"
+            tooltip  = "${appName} ${appVersion}"
         }
         icon {
             'default' {

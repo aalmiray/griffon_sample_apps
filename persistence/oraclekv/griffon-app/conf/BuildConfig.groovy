@@ -51,6 +51,7 @@ griffon {
     memory {
         //max = '64m'
         //min = '2m'
+        //minPermSize = '2m'
         //maxPermSize = '64m'
     }
     jars {
@@ -110,14 +111,14 @@ griffon {
 
 deploy {
     application {
-        title = 'Sample 0.1'
+        title = "${appName} ${appVersion}"
         vendor = System.properties['user.name']
-        homepage = 'http://localhost/Sample'
+        homepage = "http://localhost/${appName}"
         description {
-            complete = 'Sample 0.1'
-            oneline  = 'Sample 0.1'
-            minimal  = 'Sample 0.1'
-            tooltip  = 'Sample 0.1'
+            complete = "${appName} ${appVersion}"
+            oneline  = "${appName} ${appVersion}"
+            minimal  = "${appName} ${appVersion}"
+            tooltip  = "${appName} ${appVersion}"
         }
         icon {
             'default' {
@@ -185,8 +186,8 @@ log4j = {
         console name: 'stdout', layout: pattern(conversionPattern: '%d [%t] %-5p %c - %m%n')
     }
 
-    error 'org.codehaus.griffon'
-    error 'org.springframework',
+    error 'org.codehaus.griffon',
+          'org.springframework',
           'org.apache.karaf',
           'groovyx.net'
     warn  'griffon'

@@ -10,7 +10,6 @@ log4j = {
     info   'griffon.util',
            'griffon.core',
            'griffon.swing',
-           'griffon.app',
-           'griffon.plugins'
+           'griffon.app'
 }
 
