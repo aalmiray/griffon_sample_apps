@@ -1,6 +1,6 @@
 package sample
 
-application(title: 'Sympledb',
+application(title: 'DynamoDB',
   preferredSize: [320, 240],
   pack: true,
   locationByPlatform: true,
