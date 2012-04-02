@@ -3,15 +3,14 @@ environments {
     development {
         signingkey {
             params {
-                sigfile = 'GRIFFON'
-                keystore = "${basedir}/griffon-app/conf/keys/devKeystore"
-                alias = 'development'
+                // sigfile = 'GRIFFON'
+                // keystore = "${basedir}/griffon-app/conf/keys/devKeystore"
+                // alias = 'development'
                 storepass = 'BadStorePassword'
                 keypass   = 'BadKeyPassword'
                 lazy      = true // only sign when unsigned
             }
         }
-
     }
     test {
         griffon {
@@ -24,9 +23,6 @@ environments {
     production {
         signingkey {
             params {
-                sigfile = 'GRIFFON'
-                keystore = 'CHANGE ME'
-                alias = 'CHANGE ME'
                 // NOTE: for production keys it is more secure to rely on key prompting
                 // no value means we will prompt //storepass = 'BadStorePassword'
                 // no value means we will prompt //keypass   = 'BadKeyPassword'
@@ -51,6 +47,7 @@ griffon {
     memory {
         //max = '64m'
         //min = '2m'
+        //minPermSize = '2m'
         //maxPermSize = '64m'
     }
     jars {
@@ -110,14 +107,14 @@ griffon {
 
 deploy {
     application {
-        title = 'List 0.1'
+        title = "${appName} ${appVersion}"
         vendor = System.properties['user.name']
-        homepage = 'http://localhost/List'
+        homepage = "http://localhost/${appName}"
         description {
-            complete = 'List 0.1'
-            oneline  = 'List 0.1'
-            minimal  = 'List 0.1'
-            tooltip  = 'List 0.1'
+            complete = "${appName} ${appVersion}"
+            oneline  = "${appName} ${appVersion}"
+            minimal  = "${appName} ${appVersion}"
+            tooltip  = "${appName} ${appVersion}"
         }
         icon {
             'default' {
@@ -185,8 +182,8 @@ log4j = {
         console name: 'stdout', layout: pattern(conversionPattern: '%d [%t] %-5p %c - %m%n')
     }
 
-    error 'org.codehaus.griffon'
-    error 'org.springframework',
+    error 'org.codehaus.griffon',
+          'org.springframework',
           'org.apache.karaf',
           'groovyx.net'
     warn  'griffon'
