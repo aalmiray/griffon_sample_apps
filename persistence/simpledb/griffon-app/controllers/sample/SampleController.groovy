@@ -20,6 +20,6 @@ class SampleController {
                 tmpList << person
             }
         }
-        execSync { model.people.addAll(tmpList) }
+        execInsideUIAsync { model.people.addAll(tmpList) }
     }
 }

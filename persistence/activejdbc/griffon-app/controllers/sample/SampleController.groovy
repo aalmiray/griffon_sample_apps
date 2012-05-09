@@ -7,7 +7,7 @@ class SampleController {
       withActivejdbc { String dataSourceName ->
          List<Person> tmpList = []
          tmpList.addAll(Person.findAll())       
-         execSync { model.people.addAll(tmpList) }
+         execInsideUIAsync { model.people.addAll(tmpList) }
       }
    }
 }

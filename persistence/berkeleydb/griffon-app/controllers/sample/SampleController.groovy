@@ -19,7 +19,7 @@ class SampleController {
              cursor.close()
          }
          
-         execSync { model.people.addAll tmpList }
+         execInsideUIAsync { model.people.addAll tmpList }
       }
    }
 }

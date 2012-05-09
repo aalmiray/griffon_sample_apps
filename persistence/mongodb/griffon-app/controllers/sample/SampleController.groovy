@@ -14,7 +14,7 @@ class SampleController {
                 def person = cursor.next()
                 tmpList << [id: person.id, name: person.name, lastname: person.lastname]
             }
-            execSync { model.people.addAll(tmpList) }
+            execInsideUIAsync { model.people.addAll(tmpList) }
         }
     }
 }

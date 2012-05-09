@@ -11,7 +11,7 @@ class SampleController {
                         name: it.name,
                         lastname: it.lastname]
          }
-         execSync { model.peopleList.addAll(tmpList) }
+         execInsideUIAsync { model.peopleList.addAll(tmpList) }
       }
    }
 }

@@ -11,7 +11,7 @@ class SampleController {
          jedis.keys('*').each { key ->
              tmpList << Person.fromJSON(jedis.get(key))
          } 
-         execSync { model.people.addAll tmpList }
+         execInsideUIAsync { model.people.addAll tmpList }
       }
    }
 }

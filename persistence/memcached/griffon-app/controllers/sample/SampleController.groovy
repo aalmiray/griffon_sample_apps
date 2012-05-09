@@ -12,7 +12,7 @@ class SampleController {
          client.getBulk(keys).each { key, data ->
              tmpList << Person.fromJSON(data)
          }   
-         execSync { model.people.addAll tmpList }
+         execInsideUIAsync { model.people.addAll tmpList }
       }
    }
 }

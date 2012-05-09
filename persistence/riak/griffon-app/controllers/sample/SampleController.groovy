@@ -11,7 +11,7 @@ class SampleController {
          riak.listBucket('people').bucketInfo.keys.each { key ->
              tmpList << Person.fromJSON(riak.fetch('people', key).object.value)
          }     
-         execSync { model.people.addAll tmpList }
+         execInsideUIAsync { model.people.addAll tmpList }
       }
    }
 }

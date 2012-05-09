@@ -9,7 +9,7 @@ class SampleController {
       withTerrastore { String clientName, TerrastoreClient client ->
          List<Person> tmpList = []
          tmpList.addAll client.bucket('people').values().get(Person).values()
-         execSync { model.people.addAll tmpList }
+         execInsideUIAsync { model.people.addAll tmpList }
       }
    }
 }

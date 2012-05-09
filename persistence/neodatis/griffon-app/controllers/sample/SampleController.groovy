@@ -8,7 +8,7 @@ class SampleController {
    def onStartupEnd = { app ->
       withOdb { String databaseName, ODB odb ->
          def tmpList = odb.query(Person).objects()
-         execSync { model.people.addAll(tmpList) }
+         execInsideUIAsync { model.people.addAll(tmpList) }
       }
    }
 }

@@ -11,7 +11,7 @@ class SampleController {
          PersonMapper personMapper = session.getMapper(PersonMapper)
          List<Person> tmpList = []
          tmpList.addAll personMapper.list()
-         execSync { model.people.addAll tmpList }
+         execInsideUIAsync { model.people.addAll tmpList }
       }
    }
 }

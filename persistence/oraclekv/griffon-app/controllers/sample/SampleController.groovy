@@ -11,7 +11,7 @@ class SampleController {
              String json = new String(kvv.value.value)
              Person.fromJSON(json)
          }   
-         execSync { model.people.addAll tmpList }
+         execInsideUIAsync { model.people.addAll tmpList }
       }
    }
 }

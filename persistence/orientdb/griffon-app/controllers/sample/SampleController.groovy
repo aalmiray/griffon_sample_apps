@@ -12,7 +12,7 @@ class SampleController {
                     lastname: person.lastname
                 )
             }
-            execSync { model.people.addAll(tmpList) }
+            execInsideUIAsync { model.people.addAll(tmpList) }
         }
     }
 }

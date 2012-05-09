@@ -9,7 +9,7 @@ class SampleController {
       withEbean { String dataSourceName, EbeanServer ebeanServer ->
          List<Person> tmpList = []
          tmpList.addAll ebeanServer.find(Person).findList()     
-         execSync { model.people.addAll tmpList }
+         execInsideUIAsync { model.people.addAll tmpList }
       }
    }
 }
