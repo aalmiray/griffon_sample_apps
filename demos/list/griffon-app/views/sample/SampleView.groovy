@@ -1,5 +1,7 @@
 package sample
 
+import javax.swing.*
+
 application(title: 'sample',
   preferredSize: [480, 200],
   pack: true,
