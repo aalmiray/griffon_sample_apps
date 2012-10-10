@@ -11,7 +11,7 @@ environments {
     }
     test {
         database {
-            url = 'local:/temp/sample-test'
+            url = 'local:/tmp/sample-test'
         }
     }
     production {

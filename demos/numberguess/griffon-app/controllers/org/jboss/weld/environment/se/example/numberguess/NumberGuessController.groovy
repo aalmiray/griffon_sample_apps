@@ -17,7 +17,7 @@ class NumberGuessController {
         model.resultMessage = msgGenerator.resultMessage
         model.remainingGuesses = game.remainingGuesses
     }
-    
+
     def guess = {
         int number = -1
         try {
@@ -25,12 +25,12 @@ class NumberGuessController {
         } catch(NumberFormatException nfe) {
             // ignore
         }
-        
+
         game.guess = number
         game.check()
         update()
-        
-        if(game.gameWon || game.gameLost) {    
+
+        if(game.gameWon || game.gameLost) {
              view.switchButtons() 
         }
     }
@@ -38,14 +38,14 @@ class NumberGuessController {
     def replay = {
         game.reset()
         update()
-        execAsync { 
+        execInsideUIAsync { 
             model.challengeMessage = msgGenerator.challengeMessage
             view.switchButtons()
         }
     }
-    
+
     private void update() {
-        execAsync {
+        execInsideUIAsync {
             model.guess = ''
             model.resultMessage = msgGenerator.resultMessage
             model.remainingGuesses = game.remainingGuesses

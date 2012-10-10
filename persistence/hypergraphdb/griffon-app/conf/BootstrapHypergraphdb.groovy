@@ -18,14 +18,10 @@ class BootstrapHypergraphdb {
     }
 
     def destroy = { String databaseName, HyperGraph hg ->
-        println databaseName
-        println hg
         HGSearchResult rs = hg.find(new AtomTypeCondition(Person))
         try {
             // HGSearchResult implements j.u.Iterator
-            println rs
             for(handle in rs) {
-                println handle 
                 hg.remove(handle)
             }
         } finally  {

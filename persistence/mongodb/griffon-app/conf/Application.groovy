@@ -8,3 +8,13 @@ application {
     // If you want some non-standard application class, apply it here
     //frameClass = 'javax.swing.JFrame'
 }
+
+mvcGroups {
+    // MVC Group for "sample"
+    'sample' {
+        model      = 'sample.SampleModel'
+        view       = 'sample.SampleView'
+        controller = 'sample.SampleController'
+    }
+
+}
