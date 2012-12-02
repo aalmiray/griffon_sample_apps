@@ -1,5 +1,5 @@
 persistenceUnit {
-    facrtory {
+    factory {
         // EntityManagerFactory properties go here
     }
     entityManager {
