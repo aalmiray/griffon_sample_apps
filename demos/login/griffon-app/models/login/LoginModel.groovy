@@ -1,9 +1,9 @@
 package login
 
 import groovy.beans.Bindable
-import griffon.beans.Listener
+import griffon.transform.PropertyListener
 
-@Listener(enabler)
+@PropertyListener(enabler)
 class LoginModel {
     @Bindable String username
     @Bindable String password

@@ -1,11 +1,13 @@
 package groovyedit
 
+import griffon.transform.Threading
 import javax.swing.JFileChooser
 
 class GroovyEditController {
    def model
    def view
 
+   @Threading(Threading.Policy.SKIP)
    def openFile = {
       def openResult = view.fileChooserWindow.showOpenDialog(view.fileViewerWindow)
       if(JFileChooser.APPROVE_OPTION == openResult) {

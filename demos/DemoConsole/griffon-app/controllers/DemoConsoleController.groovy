@@ -1,7 +1,7 @@
 import java.awt.event.ActionEvent
 
 class DemoConsoleController {
-    GroovyShell shell = new GroovyShell()
+    private GroovyShell shell = new GroovyShell()
 
     // these will be injected by Griffon
     def model
@@ -9,17 +9,14 @@ class DemoConsoleController {
 
     def executeScript = { ActionEvent evt = null ->
         model.enabled = false
-        doOutside {
-            def result
-            try {
-                result = shell.evaluate(model.scriptSource)
-            } finally {
-                edt {
-                    model.enabled = true
-                    model.scriptResult = result
-                }
+        def result
+        try {
+            result = shell.evaluate(model.scriptSource)
+        } finally {
+            executeInsideUIAsync {
+                model.enabled = true
+                model.scriptResult = result
             }
         }
     }
 }
-

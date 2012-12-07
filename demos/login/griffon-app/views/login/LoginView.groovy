@@ -3,10 +3,7 @@ package login
 import java.awt.Color
 
 actions {
-    action(id: 'loginAction',
-        name: 'Login',
-        enabled: bind{ model.enabled },
-        closure: controller.login)
+    action(loginAction, enabled: bind{ model.enabled })
 }
 
 application(title: 'Some title', pack:true,
