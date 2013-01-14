@@ -1,5 +1,6 @@
 package sample
 
+@griffon.plugins.activejdbc.ActivejdbcAware
 class SampleController {
    def model
 

@@ -1,5 +1,6 @@
 package sample
 
+@griffon.plugins.hibernate4.Hibernate4Aware
 class SampleController {
    def model
 

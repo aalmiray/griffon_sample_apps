@@ -1,5 +1,6 @@
 package sample
 
+@griffon.plugins.datasource.DataSourceAware
 class SampleController {
    def model
 

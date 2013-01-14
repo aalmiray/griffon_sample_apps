@@ -5,12 +5,14 @@ log4j = {
         console name: 'stdout', layout: pattern(conversionPattern: '%d [%t] %-5p %c - %m%n')
     }
 
-    error  'org.codehaus.griffon'
+    error 'org.codehaus.griffon'
 
-    info   'griffon.util',
-           'griffon.core',
-           'griffon.swing',
-           'griffon.plugins',
-           'griffon.app'
+    warn  'org.hibernate'
+ 
+    info  'griffon.util',
+          'griffon.core',
+          'griffon.swing',
+          'griffon.plugins',
+          'griffon.app'
 }
 

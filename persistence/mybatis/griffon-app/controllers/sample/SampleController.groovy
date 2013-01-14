@@ -3,6 +3,7 @@ package sample
 import org.apache.ibatis.session.SqlSession
 import sample.mappers.PersonMapper
 
+@griffon.plugins.mybatis.MybatisAware
 class SampleController {
    def model
 
