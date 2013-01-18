@@ -4,6 +4,7 @@ import com.amazon.carbonado.Repository
 import com.amazon.carbonado.Storage
 import com.amazon.carbonado.Cursor
 
+@griffon.plugins.carbonado.CarbonadoAware
 class SampleController {
    def model
 
