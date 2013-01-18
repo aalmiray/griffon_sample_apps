@@ -3,6 +3,7 @@ package sample
 import javax.persistence.EntityManager
 import javax.persistence.Query
 
+@griffon.plugins.jpa.JpaAware
 class SampleController {
    def model
 
