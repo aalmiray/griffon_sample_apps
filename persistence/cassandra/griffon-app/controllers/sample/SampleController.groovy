@@ -1,5 +1,6 @@
 package sample
 
+@griffon.plugins.cassandra.CassandraAware
 class SampleController {
     def model
 
