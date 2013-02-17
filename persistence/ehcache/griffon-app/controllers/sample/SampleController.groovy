@@ -4,6 +4,7 @@ import net.sf.ehcache.CacheManager
 import net.sf.ehcache.Cache
 import net.sf.ehcache.Element
 
+@griffon.plugins.ehcache.EhcacheAware
 class SampleController {
     def model
 
