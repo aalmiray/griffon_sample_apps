@@ -1,5 +1,5 @@
 package sample
-
+@griffon.plugins.orientdb.OrientdbAware
 class SampleController {
     def model
 

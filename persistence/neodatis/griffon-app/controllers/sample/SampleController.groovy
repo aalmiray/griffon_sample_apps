@@ -2,6 +2,7 @@ package sample
 
 import org.neodatis.odb.ODB
 
+@griffon.plugins.neodatis.NeodatisAware
 class SampleController {
    def model
 

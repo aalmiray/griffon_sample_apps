@@ -13,3 +13,4 @@ log4j = {
            'griffon.app'
 }
 
+griffon.ebean.connect.onstartup=false

@@ -7,9 +7,10 @@ log4j = {
 
     error  'org.codehaus.griffon'
 
-    info   'griffon.util',
+    error  'griffon.util',
            'griffon.core',
            'griffon.swing',
            'griffon.app'
+     info  'griffon.plugins'
 }
 

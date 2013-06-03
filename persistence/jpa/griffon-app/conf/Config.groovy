@@ -13,3 +13,4 @@ log4j = {
            'griffon.app'
 }
 
+griffon.jpa.connect.onstartup=false

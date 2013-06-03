@@ -7,6 +7,7 @@ import org.apache.hadoop.hbase.client.ResultScanner
 import org.apache.hadoop.hbase.client.Scan
 import org.apache.hadoop.hbase.util.Bytes
 
+@griffon.plugins.hbase.HBaseAware
 class SampleController {
     def model
 

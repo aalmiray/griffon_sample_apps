@@ -1,5 +1,6 @@
 package sample
 
+@griffon.plugins.db4o.Db4oAware
 class SampleController {
    def model
 

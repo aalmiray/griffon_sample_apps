@@ -2,6 +2,7 @@ package sample
 
 import org.iq80.leveldb.DB
 
+@griffon.plugins.leveldb.LeveldbAware
 class SampleController {
     def model
 

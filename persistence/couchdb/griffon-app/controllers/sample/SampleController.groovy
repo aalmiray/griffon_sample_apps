@@ -3,6 +3,7 @@ package sample
 import org.jcouchdb.db.Database
 import org.jcouchdb.document.*
 
+@griffon.plugins.couchdb.CouchdbAware
 class SampleController {
     def model
 

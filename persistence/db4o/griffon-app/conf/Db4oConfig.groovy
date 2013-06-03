@@ -22,6 +22,7 @@ environments {
     }
 }
 
-def configure(EmbeddedConfiguration configuration) {
+configure = { EmbeddedConfiguration configuration ->
+println configuration
     // empty
 }

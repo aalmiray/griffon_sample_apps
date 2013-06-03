@@ -1,11 +1,11 @@
-import com.j256.ormlite.jdbc.JdbcConnectionSource
+import com.j256.ormlite.support.ConnectionSource
 import com.j256.ormlite.dao.Dao
 import com.j256.ormlite.dao.DaoManager
 import com.j256.ormlite.table.TableUtils
 import sample.Person
 
 class BootstrapOrmlite {
-    def init = { String databaseName, JdbcConnectionSource connection ->
+    def init = { String databaseName, ConnectionSource connection ->
         TableUtils.createTableIfNotExists(connection, Person)
         Dao<Person, Integer> peopleDao = DaoManager.createDao(connection, Person)
         [[id: 1, name: 'Danno',     lastname: 'Ferrin'],
@@ -20,7 +20,7 @@ class BootstrapOrmlite {
         }
     }
 
-    def destroy = { String databaseName, JdbcConnectionSource connection ->
+    def destroy = { String databaseName, ConnectionSource connection ->
         TableUtils.dropTable(connection, Person, true)
     }
 } 

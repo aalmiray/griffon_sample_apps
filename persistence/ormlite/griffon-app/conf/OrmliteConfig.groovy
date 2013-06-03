@@ -1,5 +1,5 @@
 database {
-    driverClassName = 'org.h2.Driver'
+    // driverClassName = 'org.h2.Driver'
     username = 'sa'
     password = ''
 }
